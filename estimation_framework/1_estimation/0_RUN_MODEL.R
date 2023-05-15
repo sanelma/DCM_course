@@ -21,6 +21,9 @@ Ndraws = 0      # 0 draws for mnl
 
 startingkit = 1 # if 0: No starting values based on previous model estimates, if 1: with starting values
 manual = 1      # if 1: Define starting values manually in Zz_start_values_manual_....R
+#starting values not an issue for MNL, but needed for more complex mixed models. 
+#can set starting values as beta estimates from an MNL model. 
+
 
 modelname <- "1_mnl_pooled"
 
@@ -84,30 +87,53 @@ datapath = "~/Documents/ETH Sem 2/Discrete Choice Modeling/DCM_course/estimation
 d <- read.csv(paste0(datapath,"alg_design.csv"), header = TRUE, sep=",")
 
 #load choice data
-data1 <- read.csv(file = paste0(datapath, "qualtrics_pretest_download.csv"))
+data1 <- read.csv(file = paste0(datapath, "qualtrics_download2023_19.14.csv"))
 
-#need to get the choices from the choice data and connect to alg design
-
-data1 = data1 %>%
+# precleaning 
+data1 <- data1 %>% 
   mutate_all(na_if,"") %>%
   filter(!is.na(gender)) %>%
   filter(!StartDate == "Start Date" & !StartDate == '{"ImportId":"startDate","timeZone":"Europe/Zurich"}') %>%
+  rename(cooking.frequency = Q31_1, 
+                          delivery.frequency = Q31_2, 
+                          eatout.frequency = Q31_3) %>%
   mutate(user_id = row_number()) %>%
-  dplyr::select(user_id, age, gender, budget, diet, country, Random.ID, starts_with("B"))
+  # add a dummy variable for the various dietary preferences
+  mutate(diet.vegetarian = ifelse(grepl("Vegetarian", diet), 1, 0), 
+         diet.vegan = ifelse(grepl("Vegan", diet), 1, 0), 
+         diet.lowcal = ifelse(grepl("Low calorie", diet), 1, 0),
+         diet.highcal = ifelse(grepl("High calorie", diet), 1, 0), 
+         diet.allergies = ifelse(grepl("allergies", diet), 1, 0))
+
+# get data on demographics for descriptive statistics on our sample
+demographics = data1 %>% 
+  dplyr::select(user_id, cooking.frequency, delivery.frequency, eatout.frequency, 
+         age, gender, budget, starts_with("diet"))
 
 
-#have choices in column
-data.long = data1 %>% 
-  tidyr::pivot_longer(starts_with("B", ignore.case = FALSE), names_to = "scenario", values_to = "choice") %>%
+
+# select data for models (choices and demographics): will connect to alg design 
+# pivot longer to have one row per choice scenario
+data.long = data1 %>%
+  dplyr::select(user_id, age, gender, budget, 
+                diet.vegetarian, diet.vegan, diet.lowcal, diet.highcal, diet.allergies,
+                Random.ID, starts_with("B")) %>%
+  tidyr::pivot_longer(starts_with("B", ignore.case = FALSE), 
+                      names_to = "scenario", 
+                      values_to = "choice") %>%
   filter(!is.na(choice))
+
+
 
 #need to make sure they get aligned in the right order when joining to ngene design
 
+# getting choiceset names from ngene design
 d = d %>%
   group_by(Block) %>%
   mutate(scenario = row_number()) %>%
   mutate(scenario = paste0("B", Block, "_Q", scenario))
 
+# joining ngene design to people's actual decisions. Call it "choiceset"
 choiceset = d %>%
   left_join(data.long, by = c("scenario"), multiple = "all")
 
@@ -120,43 +146,43 @@ choiceset = d %>%
 
 #data$ID <- as.integer(as.factor(data$num_id)) # has to be numeric, starting from 1
 
+# creating numeric variables
 choiceset$ID <- as.integer(as.factor(choiceset$user_id))
 choiceset <- arrange(choiceset, ID)
 
 choiceset$CHOICE <- as.integer(as.factor(choiceset$choice)) # has to be numeric, starting from 1
-choiceset$DIET <- as.integer(as.factor(choiceset$diet)) 
 choiceset$GENDER <- as.integer(as.factor(choiceset$gender)) 
-choiceset$COUNTRY <- as.integer(as.factor(choiceset$country))  #need to aggregate here somehow
+choiceset$AGE <- as.integer(as.factor(choiceset$age)) 
 choiceset<- choiceset %>% mutate(
-  BUDGET = case_when(budget == "1000-1500 CHF" ~ 1250, 
+  BUDGET = case_when(budget == "< 1000 CHF" ~ 900,  # no midpoint here - not sure what is most reasonable budget to impute
+                     budget == "1000-1500 CHF" ~ 1250, 
                      budget == "1500-2000 CHF" ~ 1750, 
                      budget == "2000-2500 CHF" ~ 2250, 
                      budget == "2500-3000 CHF" ~ 2750, 
+                     budget == "> 3000 CHF" ~ 3500, #again, no midpoint to impute. 
                      is.na(budget) ~ -99, 
-                     TRUE ~ -101389))    #need to check here that all the levels were defined
+                     TRUE ~ -101389))    #all levels succesfully defined
 
-encodings.diet = choiceset %>% 
-  ungroup() %>%
-  dplyr::select(diet, DIET) %>%
-  distinct(diet, .keep_all = TRUE)
+
 
 encodings.gender = choiceset %>% 
   ungroup() %>%
   dplyr::select(gender, GENDER) %>%
   distinct(gender, .keep_all = TRUE)
-encodings.country = choiceset %>% 
-  ungroup() %>%
-  dplyr::select(country, COUNTRY) %>%
-  distinct(country, .keep_all = TRUE)
 
 
+choiceset = choiceset %>%
+  dplyr::select(-age, -gender, - budget)
 
+# number of participants
 N <- length(unique(choiceset$ID))
 N
 
+# number of choice scenarios
 choicetasks <- length(choiceset$ID)
 choicetasks
 
+# renaming to be mixl compatible
 choiceset <- choiceset %>% dplyr::rename(cooking_cost = cooking.cost, 
                          cooking_cooking_time = cooking.cooking_time,
                          cooking_dummy_unhealthy = cooking.dummy_unhealthy, 
@@ -175,8 +201,6 @@ choiceset <- choiceset %>% dplyr::rename(cooking_cost = cooking.cost,
                          restaurant_dummy_local_organic = restaurant.dummy_local_organic)
 choiceset = choiceset %>%
   rename(c = choice)
-choiceset = choiceset %>%
-  rename(AGE = age)
 
 choiceset = choiceset %>%
   group_by(ID) %>%
@@ -192,7 +216,7 @@ choiceset$setid <- c(choiceset$ID + choiceset$set*100000)
 
 choiceset <- choiceset %>%
   dplyr::select(ID, set, setid, av_1, av_2, av_3, CHOICE, c, starts_with("cooking"), starts_with("delivery"), 
-                starts_with("restaurant"), AGE, GENDER, BUDGET, DIET, COUNTRY)
+                starts_with("restaurant"), AGE, GENDER, BUDGET, diet.vegetarian, diet.vegan, diet.lowcal, diet.highcal, diet.allergies)
 
 
 
@@ -202,7 +226,7 @@ choiceset <- choiceset %>%
 #
 # ------------------------------------------------------------------------------------------------------------#
 
-
+# define availabilities. Make sure you pull the right columns, if the df gets edited
 availabilities <- as.matrix(choiceset[,c(4:6)])
 
 
@@ -232,6 +256,12 @@ weights <- NULL
 # ------------------------------------------------------------------------------------------------------------#
 
 
+# should think about best way to include variables
+# for example, maybe age groups makes more sense than age as a continuous variable
+
+# good to normalize by dividing interaction effects by the mean - helps with continuous interaction effects (then we multiply by one for something at the mean)
+
+
 # make all NAs to this value (important for postestimation)
 #we run into 
 
@@ -240,45 +270,32 @@ choiceset[is.na(choiceset)] <- -99
 
 
 
-# sex, age, inc, ..... Zero-centered (effect) coding -- WE MAY WANT TO DO THIS? 
+# dummy encodings of categorical variables - should figure out what to do with this
 
-c <- wecdummy_cols(choiceset$GENDER)
-c$.data <- NULL
-choiceset <- cbind(choiceset,c)
-choiceset <- choiceset %>% 
-  dplyr::rename(
-    male_wec = .data_2_wec
-  )
-
-table(choiceset$male_wec)
-summary(choiceset$male_wec)
-
-# age: mean zero centered
-# IF THERE IS A MISSING VALUE IN THE AGE, DOES THAT FACTOR INTO MEAN?
-
-#scale choice set to have mean 1
-mean.age = mean(choiceset[choiceset$AGE >0,]$AGE)
-choiceset$AGE = choiceset$AGE/mean.age
-summary(data$age)
-
-#should add a none of the above to deal with this
-#not sure how to handle missing values in these normalized encodings
-c <- wecdummy_cols(choiceset$DIET)
-c$.data <- NULL
-data <- cbind(data,c)
-data <- data %>% 
-  dplyr::rename(
-    urban_wec = .data_1_wec
-  )
 
 c <- NULL
 
-#table(data$urban_wec)
-#summary(data$urban_wec)
+c <- dummy_cols(data$purp_cat)
+c$.data <- NULL
+c$.data_1 <- NULL
+data <- cbind(data,c)
+data <- data %>%
+  dplyr::rename(
+    leisure_dc = .data_2,
+    shop_dc = .data_3,
+    other_dc = .data_4
+  )
 
-#should scale to mean 1
 
 
+# normalize continuous variables to mean 1
+
+# if we want to include interaction effect in a power function, should normalize by mean.
+# but, if only want to include as an interaction on the constants or something w/out power function, then no need
+# maybe best to just normalize by mean, then no risk
+
+data[, age := age/48 ]
+summary(data$age)
 
 
 
@@ -314,7 +331,8 @@ if(Ndraws > 0) { # creates pseudo-random draws for MIXL models
   
   # draws_matrix <- halton(N*Ndraws, dim = dimensions)
   
-  draws_matrix <- data.table(qnorm(draws_matrix))
+  draws_matrix <- data.table(qnorm(draws_matrix)) #qnorm generates normal distribution. can change to qunif() for uniform draws (should not be used for random constants, only )
+  #so would need to define some draws normal and some uniform - normal for random ASC, uniform for _RND for taste heterogeneity
   colnames(draws_matrix)=c(paste0("draw_",rep(1:dimensions)))
   draws_matrix <- as.matrix(draws_matrix)
   
@@ -367,6 +385,16 @@ mod <- summary(model)
 est <- model$estimate
 
 # exclude stuff you don't want to show:
+# we want to test all parameters against zero (also the scales, since they are in an exponent)
+
+# run models first with all variables, and then exclude things that aren't significant are run again
+
+# should balance measure of fit to choose model:
+# can use AICC to compare models. The smaller the better
+# BIC is more conservative than AIC, can also use (also smaller the better)
+# LL (choicemodel): less negative the better
+# maybe best for us to rely on the BIC
+
 
 mod$metrics$initLL <- NULL
 mod$coefTable$se <- NULL
@@ -384,6 +412,8 @@ out <- capture.output(mod)
 cat(out,file=paste0(runlabel,"__model.txt"),sep="\n",append=TRUE)
 
 # latex files, estimates and (roger) more:
+latexpath = "/Users/sanelmaheinonen/Documents/ETH Sem 2/Discrete Choice Modeling/DCM_course/estimation_framework/1_estimation/Xx_multitable/"
+outputpath = "/Users/sanelmaheinonen/Documents/ETH Sem 2/Discrete Choice Modeling/DCM_course/estimation_framework/2_postestimation/"
 
 #texreg output is a helpful output file to compare tables in latex for report
 invisible(mixl::summary_tex(model, output_file = paste0(latexpath,"ztex_",modelname,"__texmod.Rdata")))
@@ -392,6 +422,8 @@ save(est, file = paste0(modelname,"__est.Rdata"))
 # save modelfile
 
 save(model, file = paste0(outputpath,modelname,"__mod.Rdata"))
+
+cat(multitex)
 
 
 # ------------------------------------------------------------------------------------------------------------#
