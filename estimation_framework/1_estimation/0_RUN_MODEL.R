@@ -25,7 +25,7 @@ manual = 1      # if 1: Define starting values manually in Zz_start_values_manua
 #can set starting values as beta estimates from an MNL model. 
 
 
-modelname <- "1_mnl_pooled"
+#modelname <- "1_mnl_pooled"
 
 #modelname <- "2_mnl_pooled_sit_dc"
 #modelname <- "2_mnl_pooled_sit_mecm"
@@ -38,7 +38,7 @@ modelname <- "1_mnl_pooled"
 
 #modelname <- "3_mnl_pooled_soz"
 #modelname <- "3_mnl_pooled_soz_mecb"
-#modelname <- "3_mnl_pooled_soz_pars"
+modelname <- "3_mnl_pooled_soz_pars"
 
 #modelname <- "4_mixl_pooled_normal"
 #modelname <- "4_mixl_pooled_lognormal"
@@ -152,7 +152,7 @@ choiceset <- arrange(choiceset, ID)
 
 choiceset$CHOICE <- as.integer(as.factor(choiceset$choice)) # has to be numeric, starting from 1
 choiceset$GENDER <- as.integer(as.factor(choiceset$gender)) 
-choiceset$AGE <- as.integer(as.factor(choiceset$age)) 
+choiceset$AGE <- as.numeric(choiceset$age)
 choiceset<- choiceset %>% mutate(
   BUDGET = case_when(budget == "< 1000 CHF" ~ 900,  # no midpoint here - not sure what is most reasonable budget to impute
                      budget == "1000-1500 CHF" ~ 1250, 
@@ -262,30 +262,11 @@ weights <- NULL
 # good to normalize by dividing interaction effects by the mean - helps with continuous interaction effects (then we multiply by one for something at the mean)
 
 
-# make all NAs to this value (important for postestimation)
-#we run into 
+
+
 
 choiceset$AGE = as.integer(choiceset$AGE)
-choiceset[is.na(choiceset)] <- -99
-
-
-
-# dummy encodings of categorical variables - should figure out what to do with this
-
-
-c <- NULL
-
-c <- dummy_cols(data$purp_cat)
-c$.data <- NULL
-c$.data_1 <- NULL
-data <- cbind(data,c)
-data <- data %>%
-  dplyr::rename(
-    leisure_dc = .data_2,
-    shop_dc = .data_3,
-    other_dc = .data_4
-  )
-
+#choiceset[is.na(choiceset)] <- -99
 
 
 # normalize continuous variables to mean 1
@@ -294,8 +275,54 @@ data <- data %>%
 # but, if only want to include as an interaction on the constants or something w/out power function, then no need
 # maybe best to just normalize by mean, then no risk
 
-data[, age := age/48 ]
-summary(data$age)
+mean_budget = mean(choiceset$BUDGET)
+mean_age = mean(choiceset$AGE, na.rm = TRUE)
+choiceset = choiceset %>% mutate(BUDGET = BUDGET/mean_budget)
+
+# going to try age as categorical bins
+choiceset = choiceset %>% 
+  mutate(AGE20 = ifelse(AGE <= 20, 1, 0), 
+         AGE25 = ifelse(AGE <=25, 1, 0), 
+         AGE30 = ifelse(AGE <= 30, 1, 0), 
+         AGEOLDER = ifelse(AGE > 30, 1, 0))
+
+choiceset = choiceset %>%
+  mutate(AGEBIN = case_when(AGE <= 20 ~ 1, 
+                             AGE <=25 ~ 2, 
+                             AGE <= 30 ~ 3, 
+                             AGE > 30 ~ 4, 
+                            TRUE ~ 5))
+
+choiceset$AGEBIN = as.integer(choiceset$AGEBIN)
+
+# also going to try age as a continuous variable - scaling to mean zero
+# not sure what to do about the one missing value
+choiceset[is.na(choiceset)] <- -99
+choiceset = choiceset %>% mutate(AGE = AGE/mean_age)
+
+
+
+
+# make all NAs to this value (important for postestimation)
+# not sure what to do about the person with a missing age
+
+
+# dummy encodings of categorical variables - should figure out what to do with this
+
+
+c <- NULL
+
+#c <- dummy_cols(data$purp_cat)
+#c$.data <- NULL
+#c$.data_1 <- NULL
+#data <- cbind(data,c)
+#data <- data %>%
+#  dplyr::rename(
+#    leisure_dc = .data_2,
+#    shop_dc = .data_3,
+#    other_dc = .data_4
+#  )
+
 
 
 
