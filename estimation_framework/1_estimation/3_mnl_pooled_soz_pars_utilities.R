@@ -15,7 +15,10 @@
 # tried some various interactions with age and cost, but wasn't significant
 
 #B_COST_RND = ( @B_COST ) * pow($AGE, @LAMBDA_AGE)  ;
-# @B_COST_A20 * $AGE20 +  @B_COST_A30 * $AGE30 etc;
+# @B_COST_A20 * $AGEOLDER +  @B_COST_A30 * $AGE30 etc;
+#  @B_ASC_D_BUD * $HIGHBUDGET
+#  + @B_UNHLTH_VEGE * $DIETVEGETARIAN
+# @B_LORG_HIGHCAL * $DIETHIGHCAL
 
 fast_mixl <- "
 
@@ -23,18 +26,18 @@ ASC_C_RNP =      0 ;
 ASC_D_RNP = @ASC_D ;
 ASC_R_RNP = @ASC_R ;
 
-B_COST_RND = ( @B_COST ) * pow( $BUDGET, @LAMBDA_COST) ;
+B_COST_RND = ( @B_COST )  * pow( $BUDGET, @LAMBDA_COST_BUDGET)  ;
 
 B_C_TIME_RND = @B_C_TIME ;
-B_D_TIME_RND = @B_D_TIME ; 
+B_D_TIME_RND = @B_D_TIME + @B_D_TIME_FEMALE * $FEMALE; 
 B_R_TIME_RND = @B_R_TIME ;
 
 
-B_UNHLTH_RND = @B_UNHLTH  ;
-B_HLTH_RND   = @B_HLTH   ;
-B_LORG_RND   = @B_LORG   ;
+B_UNHLTH_RND = @B_UNHLTH  + @B_UNHLTH_VEGETARIAN * $DIETVEGETARIAN ;
+B_HLTH_RND   = @B_HLTH ;
+B_LORG_RND   = @B_LORG  + @B_LORG_VEGETARIAN * $DIETVEGETARIAN + @B_LORG_FEMALE * $FEMALE;
 
-B_SERV_RND   = @B_SERV   ;
+B_SERV_RND   = @B_SERV  ;
 
 
 U_1 = ASC_C_RNP + B_COST_RND * $cooking_cost + B_C_TIME_RND * $cooking_cooking_time + B_UNHLTH_RND * $cooking_dummy_unhealthy + B_HLTH_RND * $cooking_dummy_healthy + B_LORG_RND * $cooking_dummy_local_organic ;

@@ -1,0 +1,33 @@
+Model diagnosis: successful convergence  
+Runtime: 6.2 secs
+
+Number of decision makers: 261 
+Number of observations: 2088 
+
+LL(null):  -2293.902 
+LL(init):  
+LL(final):  -1389.911 
+LL(choice):  -1389.911 
+Rho2:  0.3940844 
+
+AIC:  2807.82 
+AICc:  2809.53 
+BIC:  2886.84 
+Estimated parameters:  14 
+
+Estimates:
+                       est  robse rob_pval0
+B_COST             -0.1305 0.0073      0.00
+ASC_D              -0.1377 0.1839      0.45
+ASC_D_VEGE          0.0308 0.2111      0.88
+ASC_R              -0.4724 0.1767      0.01
+B_ASC_R_VEGE        0.1156 0.1657      0.49
+LAMBDA_COST_BUDGET -0.5202 0.1264      0.00
+B_C_TIME           -0.0214 0.0037      0.00
+B_D_TIME           -0.0210 0.0035      0.00
+B_R_TIME           -0.0136 0.0058      0.02
+B_UNHLTH           -0.9375 0.0819      0.00
+B_HLTH              0.4590 0.0623      0.00
+B_LORG              0.4055 0.0681      0.00
+B_LORG_VEGAN       -0.0264 0.2242      0.91
+B_SERV              0.7721 0.1245      0.00

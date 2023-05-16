@@ -165,6 +165,8 @@ choiceset<- choiceset %>% mutate(
 
 
 
+
+
 encodings.gender = choiceset %>% 
   ungroup() %>%
   dplyr::select(gender, GENDER) %>%
@@ -216,7 +218,17 @@ choiceset$setid <- c(choiceset$ID + choiceset$set*100000)
 
 choiceset <- choiceset %>%
   dplyr::select(ID, set, setid, av_1, av_2, av_3, CHOICE, c, starts_with("cooking"), starts_with("delivery"), 
-                starts_with("restaurant"), AGE, GENDER, BUDGET, diet.vegetarian, diet.vegan, diet.lowcal, diet.highcal, diet.allergies)
+                starts_with("restaurant"), AGE, GENDER, BUDGET, diet.vegetarian, diet.vegan, diet.lowcal, diet.highcal, diet.allergies) %>%
+  rename(DIETVEGETARIAN = diet.vegetarian, 
+         DIETVEGAN = diet.vegan, 
+         DIETLOWCAL = diet.lowcal, 
+         DIETHIGHCAL = diet.highcal, 
+         DIETALLERGIES = diet.allergies) 
+
+choiceset = choiceset %>% mutate(
+  MALE = ifelse(GENDER == 2, 1, 0), 
+  FEMALE = ifelse(GENDER == 1, 1, 0)
+)
 
 
 
@@ -300,6 +312,13 @@ choiceset$AGEBIN = as.integer(choiceset$AGEBIN)
 choiceset[is.na(choiceset)] <- -99
 choiceset = choiceset %>% mutate(AGE = AGE/mean_age)
 
+# variable for whether respondant is in the highest budget bin (>3000CHF month)
+choiceset$HIGHBUDGET = ifelse(choiceset$BUDGET > 2, 1, 0)
+
+choiceset = choiceset %>% mutate(
+  NODIET = ifelse(DIETVEGETARIAN + DIETVEGAN + DIETLOWCAL + DIETHIGHCAL + DIETALLERGIES == 0, 1, 0)
+)
+
 
 
 
@@ -308,6 +327,17 @@ choiceset = choiceset %>% mutate(AGE = AGE/mean_age)
 
 
 # dummy encodings of categorical variables - should figure out what to do with this
+
+
+c <- dummy_cols(choiceset$GENDER)
+c$.data <- NULL
+c$.data_1 <- NULL
+choiceset <- cbind(choiceset,c)
+choiceset <- choiceset %>%
+  dplyr::rename(
+    MALEGEN = .data_2,
+    OTHERGEN = .data_3
+  )
 
 
 c <- NULL
