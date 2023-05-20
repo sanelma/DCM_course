@@ -20,6 +20,9 @@
 #  + @B_UNHLTH_VEGE * $DIETVEGETARIAN
 # @B_LORG_HIGHCAL * $DIETHIGHCAL
 
+# removed this due to correlation between vegetarian and female
+#+ @B_LORG_FEMALE * $FEMALE
+
 fast_mixl <- "
 
 ASC_C_RNP =      0 ;
@@ -35,7 +38,7 @@ B_R_TIME_RND = @B_R_TIME ;
 
 B_UNHLTH_RND = @B_UNHLTH  + @B_UNHLTH_VEGETARIAN * $DIETVEGETARIAN ;
 B_HLTH_RND   = @B_HLTH ;
-B_LORG_RND   = @B_LORG  + @B_LORG_VEGETARIAN * $DIETVEGETARIAN + @B_LORG_FEMALE * $FEMALE;
+B_LORG_RND   = @B_LORG  + @B_LORG_VEGETARIAN * $DIETVEGETARIAN ;
 
 B_SERV_RND   = @B_SERV  ;
 

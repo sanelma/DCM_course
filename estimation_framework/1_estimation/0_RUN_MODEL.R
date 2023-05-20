@@ -18,6 +18,7 @@ source("../Zz_source_code.R")
 # ------------------------------------------------------------------------------------------------------------#
 
 Ndraws = 0      # 0 draws for mnl
+Ndraws = 1500
 
 startingkit = 1 # if 0: No starting values based on previous model estimates, if 1: with starting values
 manual = 1      # if 1: Define starting values manually in Zz_start_values_manual_....R
@@ -38,10 +39,10 @@ manual = 1      # if 1: Define starting values manually in Zz_start_values_manua
 
 #modelname <- "3_mnl_pooled_soz"
 #modelname <- "3_mnl_pooled_soz_mecb"
-modelname <- "3_mnl_pooled_soz_pars"
+modelname <- "3_mnl_pooled_soz_pars"      # using this one
 
-#modelname <- "4_mixl_pooled_normal"
-#modelname <- "4_mixl_pooled_lognormal"
+#modelname <- "4_mixl_pooled_normal"       
+#modelname <- "4_mixl_pooled_lognormal"   # struggling to get this one to work
 #modelname <- "4_mixl_pooled_johnson"
 
 #modelname <- "5_gmnl_type2"
@@ -260,6 +261,10 @@ weights <- NULL
 # summary(weights)
 # sum(weights)
 
+# should not weight samples for estimation. 
+# should only use weights at end to weight the distribution of taste parameters
+# But, in our case, can forget about weights
+
 
 # ------------------------------------------------------------------------------------------------------------#
 #
@@ -342,17 +347,6 @@ choiceset <- choiceset %>%
 
 c <- NULL
 
-#c <- dummy_cols(data$purp_cat)
-#c$.data <- NULL
-#c$.data_1 <- NULL
-#data <- cbind(data,c)
-#data <- data %>%
-#  dplyr::rename(
-#    leisure_dc = .data_2,
-#    shop_dc = .data_3,
-#    other_dc = .data_4
-#  )
-
 
 
 
@@ -433,7 +427,7 @@ if(Ndraws==0) { # MNL
                           weights = weights, nDraws = Ndraws, num_threads = cores, iterlim=10000) }
 
 if(Ndraws>0) { # MIXL
-  model <- mixl::estimate(model_spec = model_specification, start_values = est, data = data, availabilities = availabilities,
+  model <- mixl::estimate(model_spec = model_specification, start_values = est, data = choiceset, availabilities = availabilities,
                           weights = weights, draws = draws_matrix, num_threads = cores, iterlim=10000) }
 
 # estimation output tables and latex tables

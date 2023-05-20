@@ -1,0 +1,262 @@
+"","user_id","cooking.frequency","delivery.frequency","eatout.frequency","age","gender","budget","diet","diet.vegetarian","diet.vegan","diet.lowcal","diet.highcal","diet.allergies"
+"1",1,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"2",2,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"3",3,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"4",4,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","< 1000 CHF",NA,0,0,0,0,0
+"5",5,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Female","1000-1500 CHF",NA,0,0,0,0,0
+"6",6,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"7",7,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Female","< 1000 CHF",NA,0,0,0,0,0
+"8",8,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","24","Male","1000-1500 CHF",NA,0,0,0,0,0
+"9",9,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Female","1000-1500 CHF",NA,0,0,0,0,0
+"10",10,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"11",11,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"12",12,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"13",13,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"14",14,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"15",15,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","23","Male","< 1000 CHF",NA,0,0,0,0,0
+"16",16,"Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"17",17,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","23","Female","2000-2500 CHF",NA,0,0,0,0,0
+"18",18,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"19",19,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"20",20,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"21",21,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"22",22,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","24","Male","< 1000 CHF","Low calorie diet",0,0,1,0,0
+"23",23,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","25","Male","2000-2500 CHF",NA,0,0,0,0,0
+"24",24,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","22","Female","> 3000 CHF","Vegetarian",1,0,0,0,0
+"25",25,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","22","Female","< 1000 CHF","Vegan",0,1,0,0,0
+"26",26,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Usually (5+ times/week on average)","21","Female","1000-1500 CHF",NA,0,0,0,0,0
+"27",27,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","22","Male","1500-2000 CHF","Vegan",0,1,0,0,0
+"28",28,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Female","< 1000 CHF","Vegetarian",1,0,0,0,0
+"29",29,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","20","Female","1000-1500 CHF",NA,0,0,0,0,0
+"30",30,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"31",31,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","24","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"32",32,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","24","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"33",33,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","22","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"34",34,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","28","Female","> 3000 CHF","Vegan",0,1,0,0,0
+"35",35,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","22","Male","1500-2000 CHF",NA,0,0,0,0,0
+"36",36,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Vegetarian,Vegan",1,1,0,0,0
+"37",37,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","26","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"38",38,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","26","Male","2000-2500 CHF",NA,0,0,0,0,0
+"39",39,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"40",40,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Female","2000-2500 CHF","Vegetarian",1,0,0,0,0
+"41",41,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Male","< 1000 CHF",NA,0,0,0,0,0
+"42",42,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Never","23","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"43",43,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","25","Male","1500-2000 CHF",NA,0,0,0,0,0
+"44",44,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","22","Male","1000-1500 CHF",NA,0,0,0,0,0
+"45",45,"Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"46",46,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","< 1000 CHF",NA,0,0,0,0,0
+"47",47,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","25","Female","2000-2500 CHF","Low calorie diet",0,0,1,0,0
+"48",48,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","18","Male","< 1000 CHF",NA,0,0,0,0,0
+"49",49,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","21","Female","< 1000 CHF",NA,0,0,0,0,0
+"50",50,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"51",51,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"52",52,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","21","Female","< 1000 CHF","Vegetarian,Low calorie diet",1,0,1,0,0
+"53",53,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Female","< 1000 CHF","Vegetarian,Food allergies",1,0,0,0,1
+"54",54,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","30","Female","1000-1500 CHF",NA,0,0,0,0,0
+"55",55,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"56",56,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Male","1000-1500 CHF",NA,0,0,0,0,0
+"57",57,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"58",58,"Never","Never","Usually (5+ times/week on average)","23","Other or Prefer not to answer","1000-1500 CHF",NA,0,0,0,0,0
+"59",59,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"60",60,"Never","Never","Never","28","Other or Prefer not to answer","> 3000 CHF","Vegan",0,1,0,0,0
+"61",61,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","19","Male","1000-1500 CHF",NA,0,0,0,0,0
+"62",62,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","2000-2500 CHF",NA,0,0,0,0,0
+"63",63,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","21","Female","1000-1500 CHF",NA,0,0,0,0,0
+"64",64,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","21","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"65",65,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","20","Male","1000-1500 CHF",NA,0,0,0,0,0
+"66",66,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","20","Other or Prefer not to answer","1000-1500 CHF",NA,0,0,0,0,0
+"67",67,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","26","Male","1000-1500 CHF",NA,0,0,0,0,0
+"68",68,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Male","1000-1500 CHF",NA,0,0,0,0,0
+"69",69,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"70",70,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","24","Male","< 1000 CHF",NA,0,0,0,0,0
+"71",71,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","25","Male","1000-1500 CHF",NA,0,0,0,0,0
+"72",72,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","24","Male","1000-1500 CHF",NA,0,0,0,0,0
+"73",73,"Sometimes (1-4 times a week)","Usually (5+ times/week on average)","Infrequently (a few times a month or less)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"74",74,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","20","Male","1500-2000 CHF",NA,0,0,0,0,0
+"75",75,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","29","Other or Prefer not to answer","< 1000 CHF",NA,0,0,0,0,0
+"76",76,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","33","Male","> 3000 CHF","Vegetarian",1,0,0,0,0
+"77",77,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","21","Male","< 1000 CHF",NA,0,0,0,0,0
+"78",78,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","20","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"79",79,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","54","Female","1000-1500 CHF",NA,0,0,0,0,0
+"80",80,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","19","Male","1500-2000 CHF",NA,0,0,0,0,0
+"81",81,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","25","Male","1000-1500 CHF",NA,0,0,0,0,0
+"82",82,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Male","1500-2000 CHF",NA,0,0,0,0,0
+"83",83,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Male","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"84",84,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"85",85,"Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","29","Male","2000-2500 CHF","Food allergies",0,0,0,0,1
+"86",86,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","24","Female","1500-2000 CHF","Low calorie diet",0,0,1,0,0
+"87",87,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","1000-1500 CHF",NA,0,0,0,0,0
+"88",88,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","21","Female","1000-1500 CHF",NA,0,0,0,0,0
+"89",89,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"90",90,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","22","Male","1000-1500 CHF",NA,0,0,0,0,0
+"91",91,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","< 1000 CHF","High calorie diet",0,0,0,1,0
+"92",92,"Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","26","Female","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"93",93,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","20","Other or Prefer not to answer","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"94",94,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","18","Male","< 1000 CHF",NA,0,0,0,0,0
+"95",95,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","20","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"96",96,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"97",97,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","21","Male","1500-2000 CHF",NA,0,0,0,0,0
+"98",98,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","30","Female","> 3000 CHF",NA,0,0,0,0,0
+"99",99,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","21","Male","< 1000 CHF",NA,0,0,0,0,0
+"100",100,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Male","1500-2000 CHF",NA,0,0,0,0,0
+"101",101,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","28","Male","1500-2000 CHF","Low calorie diet",0,0,1,0,0
+"102",102,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","26","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"103",103,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","23","Male","1000-1500 CHF","High calorie diet",0,0,0,1,0
+"104",104,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","19","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"105",105,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"106",106,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","36","Male","> 3000 CHF",NA,0,0,0,0,0
+"107",107,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Other or Prefer not to answer","1000-1500 CHF",NA,0,0,0,0,0
+"108",108,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","25","Female","1500-2000 CHF","Vegetarian,Food allergies",1,0,0,0,1
+"109",109,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","31","Male","2000-2500 CHF","Vegetarian",1,0,0,0,0
+"110",110,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Male","2000-2500 CHF",NA,0,0,0,0,0
+"111",111,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","26","Male","1000-1500 CHF","High calorie diet",0,0,0,1,0
+"112",112,"Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","36","Male","> 3000 CHF",NA,0,0,0,0,0
+"113",113,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","21","Male","< 1000 CHF",NA,0,0,0,0,0
+"114",114,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","33","Male","1500-2000 CHF",NA,0,0,0,0,0
+"115",115,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","24","Male","1500-2000 CHF",NA,0,0,0,0,0
+"116",116,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Male","1000-1500 CHF",NA,0,0,0,0,0
+"117",117,"Infrequently (a few times a month or less)","Never","Usually (5+ times/week on average)","21","Female","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"118",118,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","22","Male","1000-1500 CHF","High calorie diet",0,0,0,1,0
+"119",119,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","18","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"120",120,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","22","Female","1000-1500 CHF",NA,0,0,0,0,0
+"121",121,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","20","Female","< 1000 CHF","Food allergies",0,0,0,0,1
+"122",122,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","20","Male","1000-1500 CHF","Vegan",0,1,0,0,0
+"123",123,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","25","Male","1000-1500 CHF",NA,0,0,0,0,0
+"124",124,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","19","Male","1500-2000 CHF","Food allergies",0,0,0,0,1
+"125",125,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Female","< 1000 CHF","Vegetarian",1,0,0,0,0
+"126",126,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Female","1000-1500 CHF",NA,0,0,0,0,0
+"127",127,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","26","Female","2500-3000 CHF","Food allergies",0,0,0,0,1
+"128",128,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","26","Female","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"129",129,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","22","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"130",130,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"131",131,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","18","Male","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"132",132,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Male","< 1000 CHF",NA,0,0,0,0,0
+"133",133,"Infrequently (a few times a month or less)","Usually (5+ times/week on average)","Sometimes (1-4 times a week)","22","Male","< 1000 CHF",NA,0,0,0,0,0
+"134",134,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"135",135,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","23","Female","1500-2000 CHF",NA,0,0,0,0,0
+"136",136,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"137",137,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"138",138,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"139",139,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","1000-1500 CHF",NA,0,0,0,0,0
+"140",140,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","21","Other or Prefer not to answer","1000-1500 CHF",NA,0,0,0,0,0
+"141",141,"Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Female","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"142",142,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","< 1000 CHF",NA,0,0,0,0,0
+"143",143,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","22","Female","< 1000 CHF","Vegetarian",1,0,0,0,0
+"144",144,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","24","Male","< 1000 CHF",NA,0,0,0,0,0
+"145",145,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","20","Female","< 1000 CHF","Vegetarian",1,0,0,0,0
+"146",146,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"147",147,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","22","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"148",148,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","22","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"149",149,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Female","< 1000 CHF",NA,0,0,0,0,0
+"150",150,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"151",151,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"152",152,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","25","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"153",153,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","24","Male","< 1000 CHF",NA,0,0,0,0,0
+"154",154,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"155",155,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"156",156,"Usually (5+ times/week on average)","Usually (5+ times/week on average)","Usually (5+ times/week on average)","29","Female","2000-2500 CHF","Vegetarian,Food allergies,High calorie diet",1,0,0,1,1
+"157",157,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"158",158,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","20","Male","1500-2000 CHF",NA,0,0,0,0,0
+"159",159,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"160",160,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Other or Prefer not to answer","1000-1500 CHF",NA,0,0,0,0,0
+"161",161,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","25","Male","1500-2000 CHF",NA,0,0,0,0,0
+"162",162,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"163",163,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Female","2000-2500 CHF","Vegetarian",1,0,0,0,0
+"164",164,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","19","Female","2000-2500 CHF",NA,0,0,0,0,0
+"165",165,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"166",166,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Female","< 1000 CHF",NA,0,0,0,0,0
+"167",167,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","21","Female","1000-1500 CHF",NA,0,0,0,0,0
+"168",168,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","23","Female","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"169",169,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","22","Male","2500-3000 CHF",NA,0,0,0,0,0
+"170",170,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","25","Female","2000-2500 CHF","High calorie diet",0,0,0,1,0
+"171",171,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","24","Male","2000-2500 CHF",NA,0,0,0,0,0
+"172",172,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","26","Female","1000-1500 CHF",NA,0,0,0,0,0
+"173",173,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"174",174,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","22","Male","2000-2500 CHF",NA,0,0,0,0,0
+"175",175,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","22","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"176",176,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","1000-1500 CHF",NA,0,0,0,0,0
+"177",177,"Infrequently (a few times a month or less)","Never","Usually (5+ times/week on average)","22","Female","1000-1500 CHF",NA,0,0,0,0,0
+"178",178,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","22","Male","1500-2000 CHF",NA,0,0,0,0,0
+"179",179,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","24","Male","1000-1500 CHF","High calorie diet",0,0,0,1,0
+"180",180,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"181",181,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","18","Female","2000-2500 CHF","High calorie diet",0,0,0,1,0
+"182",182,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","26","Female","< 1000 CHF",NA,0,0,0,0,0
+"183",183,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"184",184,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","19","Male","< 1000 CHF",NA,0,0,0,0,0
+"185",185,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","24","Male","1500-2000 CHF","Food allergies",0,0,0,0,1
+"186",186,"Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","26","Male","1000-1500 CHF","High calorie diet",0,0,0,1,0
+"187",187,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Female","< 1000 CHF",NA,0,0,0,0,0
+"188",188,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","25","Male","< 1000 CHF",NA,0,0,0,0,0
+"189",189,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"190",190,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","24","Female","2000-2500 CHF","Vegetarian",1,0,0,0,0
+"191",191,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","22","Male","1500-2000 CHF",NA,0,0,0,0,0
+"192",192,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","18","Male","1000-1500 CHF",NA,0,0,0,0,0
+"193",193,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","20","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"194",194,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"195",195,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"196",196,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"197",197,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","19","Male","1500-2000 CHF",NA,0,0,0,0,0
+"198",198,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","23","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"199",199,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"200",200,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"201",201,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","24","Male","2000-2500 CHF","Vegetarian",1,0,0,0,0
+"202",202,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","20","Female","1000-1500 CHF",NA,0,0,0,0,0
+"203",203,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Male","< 1000 CHF","Vegetarian",1,0,0,0,0
+"204",204,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","19","Male","1000-1500 CHF",NA,0,0,0,0,0
+"205",205,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","24","Male","2000-2500 CHF",NA,0,0,0,0,0
+"206",206,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"207",207,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","25","Male","1500-2000 CHF","Food allergies",0,0,0,0,1
+"208",208,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","27","Female","2500-3000 CHF","Vegetarian",1,0,0,0,0
+"209",209,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","2500-3000 CHF",NA,0,0,0,0,0
+"210",210,"Usually (5+ times/week on average)","Never","Never","57","Female","< 1000 CHF",NA,0,0,0,0,0
+"211",211,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","23","Female","< 1000 CHF","Vegetarian",1,0,0,0,0
+"212",212,"Usually (5+ times/week on average)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","60","Male","< 1000 CHF",NA,0,0,0,0,0
+"213",213,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","25","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"214",214,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"215",215,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","23","Female","1000-1500 CHF",NA,0,0,0,0,0
+"216",216,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","25","Other or Prefer not to answer","> 3000 CHF","Low calorie diet",0,0,1,0,0
+"217",217,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","18","Male","1500-2000 CHF",NA,0,0,0,0,0
+"218",218,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","24","Female","1000-1500 CHF",NA,0,0,0,0,0
+"219",219,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Female","1000-1500 CHF",NA,0,0,0,0,0
+"220",220,"Infrequently (a few times a month or less)","Never","Usually (5+ times/week on average)","25","Female","2000-2500 CHF",NA,0,0,0,0,0
+"221",221,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Female","1000-1500 CHF","Vegetarian,Vegan",1,1,0,0,0
+"222",222,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","25","Male","1500-2000 CHF",NA,0,0,0,0,0
+"223",223,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Never","26","Male","1500-2000 CHF",NA,0,0,0,0,0
+"224",224,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","23","Female","< 1000 CHF","Vegetarian",1,0,0,0,0
+"225",225,"Usually (5+ times/week on average)","Never","Usually (5+ times/week on average)","23","Male","1500-2000 CHF","Vegetarian",1,0,0,0,0
+"226",226,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","24","Male","1000-1500 CHF",NA,0,0,0,0,0
+"227",227,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","21","Female","1000-1500 CHF",NA,0,0,0,0,0
+"228",228,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","22","Female","< 1000 CHF","Vegetarian,Vegan",1,1,0,0,0
+"229",229,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","26","Male","1000-1500 CHF",NA,0,0,0,0,0
+"230",230,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","29","Female","1000-1500 CHF",NA,0,0,0,0,0
+"231",231,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","26","Male","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"232",232,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","21","Male","1000-1500 CHF","High calorie diet",0,0,0,1,0
+"233",233,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"234",234,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"235",235,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","34","Female","2500-3000 CHF","Low calorie diet",0,0,1,0,0
+"236",236,"Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","21","Male","< 1000 CHF",NA,0,0,0,0,0
+"237",237,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","25","Male","1000-1500 CHF","Food allergies",0,0,0,0,1
+"238",238,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","22","Female","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"239",239,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","23","Male","1000-1500 CHF",NA,0,0,0,0,0
+"240",240,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","23","Male","1500-2000 CHF",NA,0,0,0,0,0
+"241",241,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","22","Male","1500-2000 CHF",NA,0,0,0,0,0
+"242",242,"Sometimes (1-4 times a week)","Never","Usually (5+ times/week on average)","Wq","Male","1000-1500 CHF","Low calorie diet",0,0,1,0,0
+"243",243,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Infrequently (a few times a month or less)","19","Male","2000-2500 CHF",NA,0,0,0,0,0
+"244",244,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Usually (5+ times/week on average)","23","Male","1000-1500 CHF","Vegetarian",1,0,0,0,0
+"245",245,"Sometimes (1-4 times a week)","Never","Infrequently (a few times a month or less)","22","Male","< 1000 CHF","Low calorie diet",0,0,1,0,0
+"246",246,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","20","Female","1000-1500 CHF",NA,0,0,0,0,0
+"247",247,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Infrequently (a few times a month or less)","22","Female","1500-2000 CHF",NA,0,0,0,0,0
+"248",248,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","27","Female","2500-3000 CHF","Vegetarian",1,0,0,0,0
+"249",249,"Infrequently (a few times a month or less)","Never","Usually (5+ times/week on average)","18","Male","< 1000 CHF","Low calorie diet",0,0,1,0,0
+"250",250,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","21","Male","> 3000 CHF","High calorie diet",0,0,0,1,0
+"251",251,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","20","Female","1000-1500 CHF",NA,0,0,0,0,0
+"252",252,"Sometimes (1-4 times a week)","Never","Sometimes (1-4 times a week)","20","Other or Prefer not to answer","1500-2000 CHF",NA,0,0,0,0,0
+"253",253,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","19","Female","< 1000 CHF","Vegan",0,1,0,0,0
+"254",254,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","35","Male","> 3000 CHF",NA,0,0,0,0,0
+"255",255,"Usually (5+ times/week on average)","Never","Sometimes (1-4 times a week)","24","Male","1500-2000 CHF",NA,0,0,0,0,0
+"256",256,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","28","Male","2500-3000 CHF","Vegetarian",1,0,0,0,0
+"257",257,"Sometimes (1-4 times a week)","Sometimes (1-4 times a week)","Usually (5+ times/week on average)","21","Male","1000-1500 CHF",NA,0,0,0,0,0
+"258",258,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","20","Female","1000-1500 CHF",NA,0,0,0,0,0
+"259",259,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","19","Male","< 1000 CHF","High calorie diet",0,0,0,1,0
+"260",260,"Usually (5+ times/week on average)","Never","Infrequently (a few times a month or less)","24","Female","1000-1500 CHF","Food allergies,Low calorie diet",0,0,1,0,1
+"261",261,"Usually (5+ times/week on average)","Infrequently (a few times a month or less)","Sometimes (1-4 times a week)","24","Male","1500-2000 CHF",NA,0,0,0,0,0

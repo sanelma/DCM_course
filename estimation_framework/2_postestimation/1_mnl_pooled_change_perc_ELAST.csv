@@ -1,0 +1,8 @@
+"";COOK;DEL;REST
+"";;;
+cooking_cooking_time;-0.15;0.26;0.12
+cooking_cost;-0.57;0.77;0.55
+delivery_cost;0.31;-1.8;0.3
+delivery_waiting_time_home;0.08;-0.49;0.09
+restaurant_cost;0.45;0.69;-1
+restaurant_travel_time;0.05;0.06;-0.11

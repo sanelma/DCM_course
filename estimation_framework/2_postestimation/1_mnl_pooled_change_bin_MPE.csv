@@ -1,0 +1,12 @@
+"";COOK;DEL;REST
+"";;;
+cooking_dummy_healthy;7.24;-2.84;-4.4
+cooking_dummy_local_organic;6.07;-2.41;-3.67
+cooking_dummy_unhealthy;-16.05;6.56;9.49
+delivery_dummy_healthy;-2.9;4.6;-1.71
+delivery_dummy_local_organic;-2.45;3.95;-1.51
+delivery_dummy_unhealthy;5.49;-8.59;3.1
+restaurant_dummy_healthy;-4.57;-1.74;6.31
+restaurant_dummy_local_organic;-3.69;-1.54;5.22
+restaurant_dummy_ts_restaurant;-7.69;-3.12;10.81
+restaurant_dummy_unhealthy;9.22;3.6;-12.82
