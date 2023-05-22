@@ -24,7 +24,7 @@ modelname <- "1_mnl_pooled"
 # modelname <- "2_mnl_pooled_sit_zcdc"
 
 # modelname <- "2_mnl_pooled_sit_pars"
-# modelname <- "3_mnl_pooled_soz_pars"
+ modelname <- "3_mnl_pooled_soz_pars"
 
 # modelname <- "4_mixl_pooled_normal"
 # modelname <- "4_mixl_pooled_lognormal"
@@ -106,6 +106,8 @@ suppressWarnings(run_analysis(model=model,dat=dat,outputpath=outputpath,modelnam
 # ------------------------------------------------------------------------------------------------------------#
 # note: More functions available in source code; add your personalized functions there
 
+# Sanelma note: I think I figured this part out? 
+
 names(est)
 
 #shows functions of the parameters and their standard errors and t-values
@@ -114,7 +116,13 @@ deltamethod("B_D_TIME","B_COST")
 deltamethod("B_R_TIME","B_COST")
 deltamethod("B_C_TIME","B_COST")
 
-#can use this when we have interaction effects 
+deltamethod("B_HLTH","B_COST")  #people willing to pay on average 3.51 CHF for healthy? 
+deltamethod("B_UNHLTH","B_COST")  #people (nonvegetarians) willing to pay on average 6.43 CHF to avoid unhealthy? 
+deltamethod("B_LORG", "B_COST") #non (nonvegetarians) willing to pay on average 2.21 for local organic
+
+deltamethod("B_SERV", "B_COST")
+
+#can use deltasumnum when we have interaction effects 
 # where B_TT_C is a reference category for rural areas, B_URBAN_TT_C is interaction w/ urban area
 # ex: (B_TT_C + B_URBAN_TT_C)/B_COST  (sum gives us valuation for urban areas)
 # can compare to delta method of B_TT_C/B_COST  (valuation for urban areas)
@@ -122,7 +130,19 @@ deltamethod("B_C_TIME","B_COST")
 # using standard error, can calculate confidence intervals for the two estimates and see that they are not overlapping - significantly different
 # we would also see they are significantly different from a significant interaction effect
 # don't need to add these to output tables, but if we find a significant effect then we could create its own output table
-deltasumnum("B")
+
+
+deltasumnum("B_D_TIME", "B_D_TIME_FEMALE", "B_COST")  
+#computing value of delivery wait time for women 0.22, st 0.04 so range is 0.12 to 0.30
+# for men, from above, it's 0.14 with se 0.03, so range 0.08 to 0.20. 
+# 95% confidence intervals overlap, so we do not have a statistically significant difference in monetary valuation of wait time 
+
+deltasumnum("B_UNHLTH", "B_UNHLTH_VEGETARIAN", "B_COST") 
+#vegetarians willing to pay 9.66 to avoid unhealthy - confidence interval does not overlap with nonvegetarians
+
+deltasumnum("B_LORG", "B_LORG_VEGETARIAN", "B_COST") 
+# vegetarians willing to to pay 6.01 for local organic food : very different from nonvegetarians!
+
 
 
 # ------------------------------------------------------------------------------------------------------------#
@@ -131,7 +151,7 @@ deltasumnum("B")
 #
 # ------------------------------------------------------------------------------------------------------------#
 
-# specify the modelnames for valuation inference - some models that have random components
+# specify the model names for valuation inference - some models that have random components
 
 
 modelnames=c("4_mixl_pooled_normal")
@@ -177,6 +197,7 @@ for (name in modelnames) {
   posteriors <- posteriors / posteriors$B_COST_RND
   }
   
+  # why is the cost column removed? 
   posteriors[,grep(pattern = "COST",colnames(posteriors))] <- NULL
   
   medians <- apply(posteriors,2,median)
@@ -195,16 +216,27 @@ for (name in modelnames) {
 
 #can look at distribution of posteriors - they should look roughly like the distribution that we specified
 # the distributions are specified through the form in the mixl files - the default for draws is normal. for example, exp() in front is an exponential distribution
-histogram(posteriors$B_C_TIME_RND)  #some people like to cook
-summary(posteriors$B_C_TIME_RND) # can see that the max B_TT_Car is positive - indicates that some people (at least one) prefer to travel longer distances
 
-histogram(posteriors$B_LORG_RND)  #some people like to cook
-summary(posteriors$B_LORG_RND) # can see that the max B_TT_Car is positive - indicates that some people (at least one) prefer to travel longer distances
+histogram(posteriors$B_C_TIME_RND, col = "grey",
+          main = "Posterior distribution of b_cooking_time",
+          xlab = "b_cooking_time")
+
+#some people like to cook
+summary(posteriors$B_C_TIME_RND) # can see that the max B_C_TIME is positive - indicates that some people like to cook
+
+histogram(posteriors$B_LORG_RND)  #no random component added here, so only two options on histogram
+summary(posteriors$B_LORG_RND) 
 
 
 #mean(posteriors$B_TT_C_RND / posteriors$B_COST_RND) # mean value of travel time savings for car across all respondents
 median(posteriors$B_C_TIME_RND / posteriors$B_COST_RND) # median is more robust to outliers - should use the median
 # could also do simple t-tests to see if coefficients of different populations differ from each other
+
+histogram(posteriors$B_SERV_RND, col = "grey", 
+          main = "Posterior distribution of b_tableservice",
+          xlab = "b_tableservice")
+          
+
 
 
 coeffs <- as.data.frame(do.call(rbind,coeff_mat)) # use do.call(rbind,...) to put things together
