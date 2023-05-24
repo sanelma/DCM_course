@@ -6,7 +6,7 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) # set root in source
 source("../Zz_source_code.R")
 source("../Zz_postestimation.R")
 
-outputpath = "/Users/sanelmaheinonen/Documents/ETH Sem 2/Discrete Choice Modeling/DCM_course/estimation_framework/2_postestimation/"
+outputpath = "C:/Users/Thibault Vignon/OneDrive/Desktop/ETHZ/Discrete Choice Models/DCM_course/estimation_framework/2_postestimation/"
 
 # ------------------------------------------------------------------------------------------------------------#
 #
@@ -17,7 +17,7 @@ outputpath = "/Users/sanelmaheinonen/Documents/ETH Sem 2/Discrete Choice Modelin
 # choose your model:
 
 
-modelname <- "1_mnl_pooled"
+# modelname <- "1_mnl_pooled"
 
 # modelname <- "2_mnl_pooled_sit_dc"
 # modelname <- "2_mnl_pooled_sit_wec"
@@ -133,7 +133,7 @@ deltamethod("B_SERV", "B_COST")
 
 
 deltasumnum("B_D_TIME", "B_D_TIME_FEMALE", "B_COST")  
-#computing value of delivery wait time for women 0.22, st 0.04 so range is 0.12 to 0.30
+#computing value of delivery wait time for women 0.22, se 0.04 so range is 0.14 to 0.30
 # for men, from above, it's 0.14 with se 0.03, so range 0.08 to 0.20. 
 # 95% confidence intervals overlap, so we do not have a statistically significant difference in monetary valuation of wait time 
 
@@ -261,37 +261,45 @@ means <- fread(file=paste0(outputpath,modelname,"_mean_vars.csv"),sep = ";",head
 names(est)
 means
 
-tt_bf <- abs(means$mean[means$name == "tt_bf_mc"] * est["B_TT_W"] / 60 )
-tt_v <- abs(means$mean[means$name == "tt_v_mc"] * est["B_TT_B"] / 60 )
-tt_cs <- abs(means$mean[means$name == "tt_cs_mc"] * est["B_TT_CS"] / 60 )
-tt_cp <- abs(means$mean[means$name == "tt_cp_mc"] * est["B_TT_CP"] / 60 )
-tt_pt <- abs(means$mean[means$name == "tt_pt_mc"] * est["B_TT_W"] / 60 )
+minute_delivery <- abs(means$mean[means$name == "delivery_waiting_time_home"] * est["B_D_TIME"] )
+minute_cooking <- abs(means$mean[means$name == "cooking_cooking_time"] * est["B_C_TIME"] )
+minute_restaurant <- abs(means$mean[means$name == "restaurant_travel_time"] * est["B_R_TIME"] )
 
-c_cp_mc <- abs(means$mean[means$name == "c_cp_mc"] * est["B_COST"])
-c_cs_mc <- abs(means$mean[means$name == "c_cs_mc"] * est["B_COST"])
-c_pt_mc <- abs(means$mean[means$name == "c_pt_mc"] * est["B_COST"])
+hour_delivery <- abs(means$mean[means$name == "delivery_waiting_time_home"] * est["B_D_TIME"] / 60 )
+hour_cooking <- abs(means$mean[means$name == "cooking_cooking_time"] * est["B_C_TIME"] / 60 )
+hour_restaurant <- abs(means$mean[means$name == "restaurant_travel_time"] * est["B_R_TIME"] / 60 )
 
-cfreq_cp <- sum(as.numeric(dat$CHOICE == 7))
-cfreq_cs <- sum(as.numeric(dat$CHOICE == 8))
-cfreq_pt <- sum(as.numeric(dat$CHOICE == 9))
+chf_delivery <- abs(means$mean[means$name == "delivery_cost"] * est["B_COST"] )
+chf_cooking <- abs(means$mean[means$name == "cooking_cost"] * est["B_COST"] )
+chf_restaurant <- abs(means$mean[means$name == "restaurant_cost"] * est["B_COST"] )
 
-tc <- (c_cp_mc*cfreq_cp + c_cs_mc*cfreq_cs + c_pt_mc*cfreq_pt)/(cfreq_cp + cfreq_cs + cfreq_pt)
+lorg_delivery <- abs(means$mean[means$name == "delivery_dummy_local_organic"] * est["B_LORG"] )
+lorg_cooking <- abs(means$mean[means$name == "cooking_dummy_local_organic"] * est["B_LORG"] )
+lorg_restaurant <- abs(means$mean[means$name == "restaurant_dummy_local_organic"] * est["B_LORG"] )
 
-acc_cp_mc <- abs(means$mean[means$name == "acc_cp_mc"] * est["B_ACC_CS_CP"] / 60)
-acc_cs_mc <- abs(means$mean[means$name == "acc_cs_mc"] * est["B_ACC_CS_CP"] / 60 )
-acc_pt_mc <- abs(means$mean[means$name == "acc_pt_mc"] * est["B_ACC_PT"] / 60)
+unhlth_delivery <- abs(means$mean[means$name == "delivery_dummy_unhealthy"] * est["B_UNHLTH"] )
+unhlth_cooking <- abs(means$mean[means$name == "cooking_dummy_unhealthy"] * est["B_UNHLTH"] )
+unhlth_restaurant <- abs(means$mean[means$name == "restaurant_dummy_unhealthy"] * est["B_UNHLTH"] )
 
-tr_pt_mc <- abs(means$mean[means$name == "tr_pt_mc"] * est["B_TRNS_PT"])
-s_pt_mc <- abs(means$mean[means$name == "s_pt_mc"] * est["B_FREQ_PT"] / 60 )
+hlth_delivery <- abs(means$mean[means$name == "delivery_dummy_healthy"] * est["B_HLTH"] )
+hlth_cooking <- abs(means$mean[means$name == "cooking_dummy_healthy"] * est["B_HLTH"] )
+hlth_restaurant <- abs(means$mean[means$name == "restaurant_dummy_healthy"] * est["B_HLTH"] )
 
-r_cp_mc <- abs(means$mean[means$name == "r_cp_mc"] * est["B_RISK_CP"])
+ts_restaurant <- abs(means$mean[means$name == "restaurant_dummy_ts_restaurant"] * est["B_SERV"] )
 
-partworth <- rbind(tt_bf,tt_v,tt_cs,tt_cp,tt_pt,
-                   tc,
-                   #c_cp_mc,c_cs_mc,c_pt_mc,
-                   acc_cp_mc,acc_cs_mc,acc_pt_mc,
-                   tr_pt_mc,s_pt_mc,
-                   r_cp_mc)
+
+partworth <- rbind(#hour_delivery, hour_cooking, hour_restaurant,
+                   minute_delivery, minute_cooking, minute_restaurant,
+                   chf_delivery, chf_cooking, chf_restaurant,
+                   lorg_delivery, lorg_cooking, lorg_restaurant,
+                   unhlth_delivery, unhlth_cooking, unhlth_restaurant,
+                   hlth_delivery, hlth_cooking, hlth_restaurant,
+                   #parameters not in all models,
+                   ts_restaurant)
+
+
+
+
 
 partworth <- data.frame(partworth)
 names(partworth) <- "partworth"

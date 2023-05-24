@@ -1,0 +1,14 @@
+"";COOK;DEL;REST
+"";;;
+cooking_dummy_healthy;7.32;-2.87;-4.45
+cooking_dummy_local_organic;6.28;-2.44;-3.84
+cooking_dummy_unhealthy;-16.2;6.6;9.61
+delivery_dummy_healthy;-2.93;4.65;-1.73
+delivery_dummy_local_organic;-2.49;4.03;-1.54
+delivery_dummy_unhealthy;5.45;-8.53;3.08
+DIETVEGETARIAN;-0.37;0.12;0.26
+FEMALE;2.14;-3.69;1.56
+restaurant_dummy_healthy;-4.62;-1.76;6.38
+restaurant_dummy_local_organic;-3.86;-1.57;5.42
+restaurant_dummy_ts_restaurant;-7.59;-3.08;10.67
+restaurant_dummy_unhealthy;9.3;3.6;-12.9
