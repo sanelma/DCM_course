@@ -6,7 +6,9 @@ setwd(dirname(rstudioapi::getActiveDocumentContext()$path)) # set root in source
 source("../Zz_source_code.R")
 source("../Zz_postestimation.R")
 
-outputpath = "C:/Users/Thibault Vignon/OneDrive/Desktop/ETHZ/Discrete Choice Models/DCM_course/estimation_framework/2_postestimation/"
+#outputpath = "C:/Users/Thibault Vignon/OneDrive/Desktop/ETHZ/Discrete Choice Models/DCM_course/estimation_framework/2_postestimation/"
+
+outputpath = "/Users/sanelmaheinonen/Documents/ETH Sem 2/Discrete Choice Modeling/DCM_course/estimation_framework/2_postestimation/"
 
 # ------------------------------------------------------------------------------------------------------------#
 #
@@ -27,7 +29,7 @@ outputpath = "C:/Users/Thibault Vignon/OneDrive/Desktop/ETHZ/Discrete Choice Mod
  modelname <- "3_mnl_pooled_soz_pars"
 
 # modelname <- "4_mixl_pooled_normal"
-# modelname <- "4_mixl_pooled_lognormal"
+ modelname <- "4_mixl_pooled_lognormal"
 # modelname <- "4_mixl_pooled_johnson"
 
 # modelname <- "5_gmnl_type2"
@@ -154,8 +156,9 @@ deltasumnum("B_LORG", "B_LORG_VEGETARIAN", "B_COST")
 # specify the model names for valuation inference - some models that have random components
 
 
-modelnames=c("4_mixl_pooled_normal")
-         #    "4_mixl_pooled_lognormal","4_mixl_pooled_johnson",
+modelnames=c("4_mixl_pooled_normal",
+             "4_mixl_pooled_lognormal")
+             "4_mixl_pooled_johnson",
          #    "5_gmnl_type2","6_necgmnl",
          #    "7_wtp","8_wtp_hybrid","9_wtp_hybrid_mobitools")
 
@@ -224,8 +227,8 @@ histogram(posteriors$B_C_TIME_RND, col = "grey",
 #some people like to cook
 summary(posteriors$B_C_TIME_RND) # can see that the max B_C_TIME is positive - indicates that some people like to cook
 
-histogram(posteriors$B_LORG_RND)  #no random component added here, so only two options on histogram
-summary(posteriors$B_LORG_RND) 
+#histogram(posteriors$B_LORG_RND)  #no random component added here, so only two options on histogram
+#summary(posteriors$B_LORG_RND) 
 
 
 #mean(posteriors$B_TT_C_RND / posteriors$B_COST_RND) # mean value of travel time savings for car across all respondents
@@ -236,6 +239,23 @@ histogram(posteriors$B_SERV_RND, col = "grey",
           main = "Posterior distribution of b_tableservice",
           xlab = "b_tableservice")
           
+
+histogram(posteriors$B_D_TIME_RND, col = "grey", 
+          main = "Posterior distribution of b_delivery_time",
+          xlab = "b_deliverytime")
+
+histogram(posteriors$B_UNHLTH_RND, col = "grey", 
+          main = "Posterior distribution of b_unhealthy",
+          xlab = "b_unhealthy")
+
+histogram(posteriors$B_HLTH_RND, col = "grey", 
+          main = "Posterior distribution of b_healthy",
+          xlab = "b_healthy")
+
+histogram(posteriors$B_COST_RND, col = "grey", 
+          main = "Posterior distribution of cost",
+          xlab = "b_cost")
+
 
 
 

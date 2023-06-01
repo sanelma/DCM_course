@@ -18,7 +18,7 @@ source("../Zz_source_code.R")
 # ------------------------------------------------------------------------------------------------------------#
 
 Ndraws = 0      # 0 draws for mnl
-Ndraws = 1500
+Ndraws = 1000   # for our simple models 1000-2000 draws is more than enough
 
 startingkit = 1 # if 0: No starting values based on previous model estimates, if 1: with starting values
 manual = 1      # if 1: Define starting values manually in Zz_start_values_manual_....R
@@ -39,10 +39,10 @@ manual = 1      # if 1: Define starting values manually in Zz_start_values_manua
 
 #modelname <- "3_mnl_pooled_soz"
 #modelname <- "3_mnl_pooled_soz_mecb"
-modelname <- "3_mnl_pooled_soz_pars"      # using this one
+#modelname <- "3_mnl_pooled_soz_pars"      # using this one
 
 #modelname <- "4_mixl_pooled_normal"       
-#modelname <- "4_mixl_pooled_lognormal"   # struggling to get this one to work
+modelname <- "4_mixl_pooled_lognormal"   # struggling to get this one to work
 #modelname <- "4_mixl_pooled_johnson"
 
 #modelname <- "5_gmnl_type2"
@@ -70,6 +70,9 @@ if(startingkit==0){
     #file_startingvalues <- "../Zz_start_values_manual_wtp.R"
   }
 }
+
+#just manually decide which starting values
+file_startingvalues <- "../Zz_start_values_manual_lognormal.R"
 
 # get the current time
 
